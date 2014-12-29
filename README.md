@@ -68,11 +68,15 @@ setTimeout(function() {
 
 `fairness: Boolean` Fairness of semaphore. If set to `true`, a FIFO rules applied, else, look on each acquirers permit value.
 
+---
+
 #### #availablePermits()
 
 Returns the current number of permits available in this semaphore.
 
 Returns: `Integer`
+
+---
 
 #### #acquire([`permits`], `handler`)
 
@@ -82,11 +86,15 @@ Acquires the given number of permits from this semaphore.
 
 `handler: Function` Handler function to call.
 
+---
+
 #### #getQueueAcquirers()
 
 Returns an estimate of the number of acquirers waiting to acquire.
 
 Returns: `Function[]`
+
+---
 
 #### #getQueueLength()
 
@@ -94,11 +102,15 @@ Returns an estimate of the number of acquirers waiting to acquire.
 
 Returns: `Integer`
 
+---
+
 #### #release([`permits`])
 
 Releases the given number of permits, returning them to the semaphore.
 
 `permits: Integer` The number of permits to release.
+
+---
 
 #### #drainPermits()
 
@@ -106,17 +118,25 @@ Acquires and returns all permits that are immediately available.
 
 Returns: `Integer`
 
+---
+
 #### #reducePermits(`permits`)
 
 Shrinks the number of available permits by the indicated reduction.
 
 `permits: Integer` The number of permits to remove.
 
+---
+
 #### #tryAcquire([`permits`])
 
 Acquires the given number of permits from this semaphore.
 
 `permits: Integer` The number of permits to acquire.
+
+Returns: `Boolean` `true` if success, `false` false if fail
+
+---
 
 ## License
 
