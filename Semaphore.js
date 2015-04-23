@@ -162,7 +162,7 @@ Semaphore.prototype.reducePermits = function(permits) {
 Semaphore.prototype.tryAcquire = function(permits) {
     permits = this._parsePermits(permits, 1);
 
-    var isSuccess = this.available > permits;
+    var isSuccess = this.available >= permits;
 
     return isSuccess;
 };
